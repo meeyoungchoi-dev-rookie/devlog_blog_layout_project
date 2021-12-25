@@ -74,3 +74,29 @@
     + verticle-align: middle; -> 세로 가운데 정렬
     + text-align: center; -> 가로 가운데 정렬
     + 참고 - 참고 - https://moonhouse.co.kr/html/400278
+
+
+  ## 12월 25일
+  + 블로그 로그인 회원가입 페이지 레이아웃 수정
+    + 잘 한 부분
+      + div 내부에서 input 태그를 가운데 정렬하는 방법
+        + input 요소의 display 를 inline-block으로 처리
+        + margin-left 속성 값을 기존 px 에서 %로 변경
+        + input 태그 내의 text를 정렬하기ㅏ 위해 text-align: center 사용
+
+      + float을 clear:both 한 이후에 div 에 margin-top이 안먹는 이유
+        + clear: both 처리한 부모 div를 display:inline-block 처리
+        + 그후 margin-top 적용
+
+        + 자식 div 가로 세로 가운데 정렬
+          + 자식 div의 position을 absolute 처리
+          + 부모 div를 position을 relative 처리
+          + 부모 div를 기준으로 top , left 속성 값 적용
+
+    + 개선 해야 하는 사항
+      + 소분류 카테고리 항목의 글 상세보기 페이지 레이아웃 
+        + float , position을 사용하여 레이아웃 수정
+    
+
+        
+
