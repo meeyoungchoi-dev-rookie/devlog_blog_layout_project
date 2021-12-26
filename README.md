@@ -98,5 +98,45 @@
         + float , position을 사용하여 레이아웃 수정
     
 
+
+ ## 12월 26일
+   + 블로그 프로젝트 카테고리 소분류 별 글목록 레이아웃 수정
+    + float 속성을 사용하여 레이아웃 수정
+       * 작업 내용
+         + header
+         + content
+         + footer
+
+      + 잘 된 점
+        + float를 사용하여 div 3개를 가로로 정렬 하였다
+          + float: left 속성값을 사용하여 div를 왼쪽에 띄운후
+          + margin-left 속성으로 여백을 줬다
+        + float 처리된 div 밑에 footer div를 만들었다
+          + footer div 태그에 float 속성을 제거하기 위해 clear: both를       사용하였다
+          + ```
+               .content .left_side {
+                float: left;
+                width: 250px;
+                height: 1000px;
+                border: 1px solid orange;
+                
+            }
+
+            .content .right_side {
+                float: left;
+                width: 700px;
+                height: 1000px;
+                border: 1px solid red;
+                margin-left: 50px;
+            }
+
+            ```
+          + 참고 - https://victorydntmd.tistory.com/187
+          
+      + 개선 사항
+        + div 태그 내에서 p태그 가로 세로 가운데 정렬 하는 방법
+
+    
+
         
 
