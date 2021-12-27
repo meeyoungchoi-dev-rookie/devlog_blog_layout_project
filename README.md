@@ -135,6 +135,100 @@
           
       + 개선 사항
         + div 태그 내에서 p태그 가로 세로 가운데 정렬 하는 방법
+        
+
+## 12월 27일
+
++ 잘 된 부분
+  + 카테고리 상세 페이지 레이아웃 수정
+    + 컨텐트 영역에 left_side div 와 right_side div 추가
+      + float을 사용하여 left 정렬후 margin-left 속성을 사용하여 여백 줌
+      + ul li 태그를 사용하여 내비게이션 바를 만들어봄
+        + ```
+                    <ul>
+                        <li class="dropdown1">
+                            <div class="dropdown-menu1">HTTP</div>
+                            <div class="dropdown-content1">
+                                <a href="#">인터넷과 네트워크</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class="dropdown2">
+                            <div class="dropdown-menu2">
+                                프론트엔드
+                            </div>
+                            <div class="dropdown-content2">
+                                <a href="#">HTML</a>
+                                <a href="#">CSS</a>
+                            </div>
+                        </li>
+                    </ul>
+
+
+          ```
+        + 참고 - https://dinfree.com/lecture/frontend/122_css_proj.html
+      
+      + table 태그를 사용하여 table 생성
+        + ```
+                 <table border="2">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>댓글수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>title1</td>
+                            <td>(10)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>title2</td>
+                            <td>(5)</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>title3</td>
+                            <td>(3)</td>
+                        </tr>
+                    </tbody>
+                </table>
+          ```
+          + 참고 - https://www.codingfactory.net/10510
+
+        + div를 사용하여 카드 레이아웃 생성
+          +   ```
+                 <div class="card-box">
+                        <img src="images/login_image.png">
+                        <div class="card-body">
+                            <h5>card-title</h5>
+                            <p>content</p>
+                            <a href="#" type="button">상세보기</a>
+                        </div>
+                  </div>
+
+
+              ```
+
+          + 참고 - https://www.codingfactory.net/11458
+    + 알게된 부분
+      + li 태그에 앞에 점 없애기
+        + list-style-type: none;
+      + a 태그 밑줄 없애기
+        + text-decoration-line: none;
+
+    + 개선해야 하는 부분
+      + 페이징 버튼 레이아웃 
+        + 카드 레이아웃 한 줄에 몇개 오게 할지
+      + 카드 레이아웃 모양
+
+
+
 
     
 
