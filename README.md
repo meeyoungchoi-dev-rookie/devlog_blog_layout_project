@@ -230,6 +230,10 @@
 
 ## 12월 28일
   + 메인페이지 레이아웃 수정
+    + 배운점
+      + p태그를 가로 세로 정렬하는 방법
+        + vertical-align : inline 요소 또는 inline-block요소를 수직 정렬할때 사용
+        + text-align : block 요소 안에 있는 inline 요소를 정렬한다 (텍스트를 정렬한다)
     + 잘된점 
       + float을 사용하여 header 레이아웃  배치
         +  ```

@@ -4,35 +4,67 @@
         <meta charset="utf-8">
         <title>회원가입</title>
         <style>
-            .logo {
-                width: 100px;
-                height: 50px;
-                border: 1px solid blue;
-                float: left;
-                margin-left: 100px;
+            div {
+                box-sizing: border-box;
             }
 
-            .logo p {
+            .blog_top {
+                width: 1000px;
+                height: 100px;
+                border: 1px solid black;
+                margin-left: 15%;
+            }
+
+
+            .logo {
+                width: 200px;
+                height: 80px;
+                border: 1px solid blue;
+                float: left;
+                margin-left: 10px;
+                margin-top: 1%;
+            }
+
+            .logo .logo_title {
+                width: 150px;
+                height: 50px;
+                border: 1px solid red;
+                margin-left: 10%;
+                margin-top: 5px;
+            }
+
+            .logo_title p {
                 font-size: 2opx;
                 vertical-align: middle;
                 text-align: center;
-               
+
             }
 
             .top_buttons {
                 width: 300px;
-                height: 50px;
+                height: 80px;
                 border: 1px solid red;
                 float: right;
-                margin-right: 115px;
+                margin-right: 10px;
+                margin-top: 1%;
             }
 
-            .top_buttons button {
+            .top_buttons div {
+                width: 200px;
+                height: 60px;
+                border: 1px solid blueviolet;
+                margin-left: 16%;
+                margin-top: 2%;
+                padding-top: 15px;
+                padding-left: 25px;
+            }
+
+            /* .top_buttons button {
                 position: relative;
                 top: 25%;
                 left: 15%;
             }
-        
+         */
             .register {
                 clear: both;
                 display: inline-block;
@@ -82,12 +114,17 @@
     <body>
         <div class="blog_top">
             <div class="logo">
-                <p>DevLog</p>
+                <div class="logo_title">
+                    <p>DevLog</p>
+                </div>
+                
             </div>
             <div class="top_buttons">
-                <button type="button">Categories</button>
-                <button type="button">로그인</button>
-                <button type="button">회원가입</button>
+                <div>
+                    <button type="button">Categories</button>
+                    <button type="button">로그인</button>
+                </div>
+                
             </div>
         </div>
         <div class="register">

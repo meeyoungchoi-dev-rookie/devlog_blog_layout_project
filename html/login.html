@@ -4,12 +4,37 @@
         <meta charset="utf-8">
         <title></title>
         <style>
+            div {
+                box-sizing: border-box;
+            }
+
+            .top {
+                width: 1000px;
+                height: 100px;
+                border: 1px solid black;
+                margin-left: 15%;
+            }
+
+
+
             .top_logo {
-                width: 100px;
+                display: inline-block;
+                margin-top: 20px;
+                width: 200px;
                 height: 50px;
                 border: 1px solid blue;
+               
+                margin-left: 10px;
+            }
+
+            .logo_title {
                 float: left;
-                margin-left: 100px;
+                width: 100px;
+                height: 30px;
+                border: 1px solid pink;
+                margin-left: 25%;
+                margin-top: 5%;
+
             }
 
             .top_logo p {
@@ -19,11 +44,21 @@
 
             .top_buttons {
                 width: 300px;
-                height: 50px;
+                height: 80px;
                 border: 1px solid red;
+                margin-right: 10px;
+                margin-top: 10px;
                 float: right;
-                margin-right: 100px;
             }
+
+            .top_buttons div {
+                width: 240px;
+                height: 30px;
+                border: 1px solid palegreen;
+                margin-top: 7%;
+                margin-left: 14%;
+            }
+
 
             .login_popup {
                 clear: both;
@@ -71,12 +106,16 @@
     <body>
         <div class="top">
             <div class="top_logo">
-                <p>DevLog</p>
+                <div class="logo_title">
+                    <p>DevLog</p>
+                </div>
             </div>
             <div class="top_buttons">
-                <button type="button">Categories</button>
-                <button type="button">로그인</button>
-                <button type="button">회원가입</button>
+                <div>
+                    <button type="button">Categories</button>
+                    <button type="button">로그인</button>
+                    <button type="button">회원가입</button>
+                </div>
             </div>
         </div>
         <div class="login_popup">
