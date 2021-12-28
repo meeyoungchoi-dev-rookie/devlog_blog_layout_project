@@ -228,9 +228,160 @@
       + 카드 레이아웃 모양
 
 
+## 12월 28일
+  + 메인페이지 레이아웃 수정
+    + 잘된점 
+      + float을 사용하여 header 레이아웃  배치
+        +  ```
+           div {
+                box-sizing: border-box;
+            }
+
+            .blog_top {
+                width: 1000px;
+                height: 100px;
+                border: 1px solid black;
+                margin-left: 15%;
+            }
+
+            .blog_top .left_side {
+                float: left;
+                width: 100px;
+                height: 50px;
+                margin-left: 10px;
+                border: 1px solid red;
+                margin-top: 15px;
+
+            }
+
+             .right_side div {
+                margin-left: 600px;
+                float: left;
+                border: 1px solid green;
+                margin-top: 30px;
+                
+            }
+
+            .right_side div button {
+                margin-left: 10px;
+                margin-top: 5px;
+            }
+           ```
+        + div 내그 p 태그 정렬
+          + p태그를 div로 한번 감싸서 정렬
+            +  ```
+                     .left_side .blog_title {
+                        width: 80px;
+                        height: 40px;
+                        border: 1px solid orange;
+                        margin-left: 20px;
+                        margin-top: -6px;
+                        
+                    }
+
+                    .blog_title p {
+                        font-size: 1.25rem;
+                    }
+              ```
 
 
-    
+        + ul li를 사용하여 dropdownlist 구현
+          +  ```
+                 <ul>
+                    <li class="dropdown">
+                        <div class="dropdown-menu">HTTP</div>
+                        <div class="dropdown-content">
+                            <a href="#">인터넷과 네트워크</a>
+                            <a href="#">URI와 웹 브라우저 요청흐름 (2)</a>
+                            <a href="#">HTTP 기본</a>
+                            <a href="#">HTTP 메서드</a>
+                        </div>
+
+                    </li>
+                </ul>
+             ```
+            + dropdown : 각각의 메뉴를 구성하는 껍데기 클래스
+            + dropdown-menu : 메인 메뉴 항목을 정의하는 클래스
+            + dropdown-content : 서브메뉴가 있을 경우 드롭다운으로 나타난다
+              + 서브 메뉴 목록 지정 클래스
+
+
+        + div를 사용하여 card-box 만들기
+          + ```
+              <div class="card_box">
+                  <div class="card_image">
+                      <img src="images/login_image.png">
+                  </div>
+                  <div class="card_content">
+                      <h3><a href="#">글 제목</a></h3>
+                      <div>
+                          <span>작성자</span> <span>작성일</span>
+                      </div>
+                      
+                      <a href="#">대분류 카테고리</a> <a href="#">소분류 카테고리</a>
+                      <div class="content">
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, tempore. Dolorum vero sed in consectetur eos commodi animi incidunt optio id hic nesciunt ut, pariatur obcaecati veritatis officiis itaque deserunt.</p>
+                      </div>
+                  </div>
+               </div>
+         + div 를 사용하여 footer 만들기
+            + ```
+                <div class="blog_footer">
+                  <div>
+                      <p> DevLog.CMY <br>
+                          <a href="#">@2021 DevLog.CMY</a><br>
+                          Powered By CMY
+                      </p>
+                      
+                  </div>
+              </div>
+
+              
+
+            .blog_footer {
+                display: inline-block;
+                margin-left: 15%;
+                margin-top: 20px;
+                width: 1000px;
+                height: 90px;
+                border: 1px solid royalblue;
+            }
+
+            .blog_footer div {
+                display: inline-block;
+                text-align: center;
+                margin-left: 50%;
+               
+            }
+
+            ```
+
+     + 개선해야 하는 부분
+       + 페이지네이션 레이아웃 설계
+       + 카테고리 상세 페이지 
+        + 레이아웃 , 헤더 , footer
+       + 글 상세 페이지
+         + 레이아웃
+           + 가로 3개 div 레이아웃 으로 변경
+           + 1:1 채팅 버튼 추가
+           + 질문하기 버튼 추가
+         + 헤더
+         + footer
+        
+
+
+
+
+
+
+
+
+
+
+              
+
+
+               
 
         
 
