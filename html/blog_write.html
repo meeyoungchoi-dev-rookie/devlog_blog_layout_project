@@ -49,24 +49,28 @@
                 border: 1px solid green;
                 margin-right: 10px;
                 margin-top: 10px;
-                width: 200px;
+                width: 400px;
                 height: 80px;
             }
 
 
             .top_right div {
-                width: 170px;
+                width: 250px;
                 height: 30px;
                 border: 1px solid purple;
-                margin-top: 10%;
-                margin-left: 10%;
+                margin-top: 5%;
+                margin-left: 22%;
 
             }
 
             .middle {
-                margin-left: 200px;
+                margin-left: 15%;
                 margin-top: 50px;
 
+            }
+
+            .middle form {
+                margin-bottom: 20px;
             }
 
 
@@ -84,26 +88,29 @@
             <div class="top_right">
                 <div>
                     <button type="button">Categories</button>
+                    <button type="button">질문하기</button>
                     <button type="button">로그아웃</button>
                 </div>
                 
             </div>
         </div>
         <div class="middle">
+            <form action="">
+                <label>카테고리:</label>
+                <select name="categories" id="categories">
+                    <option value="internet">인터넷네트워크</option>
+                    <option value="html">HTML</option>
+                    <option value="css">css</option>
+                </select>
+            </form>
 
-            <ul>
-                <li>HTTP</li>
-                <li>-인터넷네트워크</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-            <textarea rows=" 100" cols="150">
+            <textarea rows="100" cols="136">
 
             </textarea>
 
             <div>
                 <button type="button">저장</button>
-
+                <button type="button">취소</button>
             </div>
         
         </div>

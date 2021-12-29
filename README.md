@@ -371,6 +371,60 @@
            + 질문하기 버튼 추가
          + 헤더
          + footer
+
+
+# 12월 29일
+ ## 로그인 , 회원가입 , 글쓰기 페이지 레이아웃 수정
+ + 잘 된점
+ + div content 영역 분할
+ ```
+            .login_popup {
+                clear: both;
+                width: 1000px;
+                height: 500px;
+                position: relative;
+                border: 1px solid brown;
+                display: inline-block;
+                margin-left: 15%;
+                margin-top: 30px;
+            }
+
+            .login_popup .popup {
+                position: absolute;
+                width: 500px;
+                height: 400px;
+                border: 1px solid orange;
+                left: 30%;
+                top: 10%;
+
+            }
+   + postion relative와 absolute를 사용
+  + div 내부 버튼 정렬
+  ```
+  .login_popup .popup .popup_body div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+                margin-left: 35%;
+            }
+
+            .login_popup .popup .popup_body div button {
+                display: block;
+                margin-bottom: 10px;
+                width: 200px;
+            }
+  + button을 div로 감싸서 버튼 정렬
+
+  ## 향후 계획
+  + 블로그
+    + 글 상세 페이지 레이아웃 수정
+  + 관리자 페이지
+    + 관리자 메인 페이지 레이아웃 설계
+    + 글 관리 페이지 레이아웃 설계
+    + 카테고리 관리 페이지 레이아웃 설계
+    + 댓글 관리 레이아웃 설계
+    + 카테고리 이동 팝업 레이아웃 설계
+    + 카테고리 관리 팝업 레이아웃 설계
         
 
 

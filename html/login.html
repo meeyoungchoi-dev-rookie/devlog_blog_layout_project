@@ -62,12 +62,12 @@
 
             .login_popup {
                 clear: both;
-                width: 1300px;
+                width: 1000px;
                 height: 500px;
                 position: relative;
                 border: 1px solid brown;
                 display: inline-block;
-                margin-left: 100px;
+                margin-left: 15%;
                 margin-top: 30px;
             }
 
@@ -81,6 +81,11 @@
 
             }
 
+            .login_popup .popup .popup_logo {
+                margin-left: 45%;
+            }
+
+
             input {
                 text-align: center;
                 display: inline-block;
@@ -92,14 +97,29 @@
                 margin-bottom: 30px;
             }
 
+            form button {
+               margin-left: 33%;
+               width: 200px;
+            }
+
             hr {
                 margin-bottom: 20px;
                 margin-top: 20px;
             }
 
-            .login_popup .popup .popup_body button {
+            .login_popup .popup .popup_body div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+                margin-left: 35%;
+            }
+
+            .login_popup .popup .popup_body div button {
                 display: block;
-                margin: auto;
+                margin-bottom: 10px;
+                width: 200px;
+
+
             }
         </style>
     </head>
@@ -127,12 +147,15 @@
                     <form>
                         <input type="text" placeholder="아이디"/><br>
                         <input id="input_password" type="password" placeholder="비밀번호"/><br>
-                        <button type="submit">회원 로그인</button>
+                        <button type="submit">로그인</button>
                     </form>
                     <hr>
-                    <button type="button">카카오 로그인</button>
-                    <button type="button">깃허브 로그인</button>
-                    <button type="button">아직 회원이 아니세요?</button>
+                    <div>
+                        <button type="button">카카오 로그인</button>
+                        <button type="button">깃허브 로그인</button>
+                        <button type="button">아직 회원이 아니세요?</button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
