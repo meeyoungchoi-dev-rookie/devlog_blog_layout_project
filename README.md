@@ -445,6 +445,211 @@
 + 블로그 상세글 레이아웃의 content 내부 영역 레이아웃 수정
 
 
+# 12월 31일
+## 블로그 글 상세페이지
+### 잘된점
++ flex를 사용하여 컨텐츠 영역 레이아웃 설계
+```
+            .middle_container .middle_center .content_center_container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .middle_center .content_center_container .content_top {
+                margin-top: 20px;
+                width: 400px;
+                height: 1000px;
+                margin-left: 7%;
+            }
+
+
+             <div class="middle_center">
+                <div class="content_center_container">
+                    <div class="content_top">
+                        <h1>글 제목</h1>
+                        <div>
+                            <span>DevLog.CMY</span> <span>2021-12-31</span> <a href="#">대항목</a> <a href="#">소항목</a>
+                        </div>
+
+                        <div>
+                            
+                            <p>
+                                <h2>소제목1</h2>
+                                <img src="images/login_image.png">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quo laboriosam, aliquam suscipit doloribus omnis expedita qui quae nesciunt voluptatibus dolorem, sunt minima repellat, nobis ratione dolor! Ut, dolore dolorem?
+                                추우 텍스트 에디터로 변경할 예정
+
+
+                                <img src="images/login_image.png">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quo laboriosam, aliquam suscipit doloribus omnis expedita qui quae nesciunt voluptatibus dolorem, sunt minima repellat, nobis ratione dolor! Ut, dolore dolorem?
+                                 
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+          
+            
+
+            .middle_container .middle_right {
+                width: 200px;
+                height: 700px;
+                margin-left: 3%;
+                margin-right: 2%;
+                margin-top: 20px;
+                border: 1px solid purple;
+            }
+
+            .middle_right h5 {
+                display: inline-block;
+                margin-left: 15%;
+                font-size: 20px;
+            }
+
+
+
+            <div class="middle_right">
+                <h5>on this page</h5>
+                <ul>
+                    <li class="dropdown1">
+                        <div class="dropdown-menu1">글제목</div>
+                        <div class="dropwdown-content1">
+                            <a href="#">소제목1</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+```
++ flex를 사용하여 댓글 영역 레이아웃 설계
+```
+  
+            .content_bottom_apply {
+                display: flex;
+                flex-direction: row;
+                width: 1000px;
+                height: 400px;
+                border: 1px solid orange;
+                margin-top: 20px;
+                margin-left: 15%;
+            }
+            
+            .content_bottom_apply .container  {
+                display: flex;
+                flex-direction: column;
+                margin-left: 30px;
+                margin-top: 20px;
+                width: 800px;
+                height: 370px;
+                border: 1px solid black;
+            }
+
+            .container .message1 {
+                margin-top: 5px;
+                width: 700px;
+                height: 100px;
+                margin-left: 10px;
+                border: 1px solid orchid;
+            }
+
+            .container .message1 p {
+                margin-left: 50px;
+            }
+
+            .container .message2 {
+                margin-top: 5px;
+                width: 700px;
+                height: 100px;
+                margin-left: 10px;
+                border: 1px solid orchid;
+            }
+
+            .message2 span {
+                margin-left: 580px;
+                margin-top: -2px;
+            }
+            .message2 img {
+                margin-left: 2px;
+               
+            }
+
+            .message2 p {
+                display: inline-block;
+                margin-left: 50px;
+            }
+
+            .container .type_message {
+                margin-top: 20px;
+                margin-left: 10px;
+                
+            }
+
+            .container .type_message form button {
+                display: block;
+            }
+
+            .content_bottom_apply div img {
+                width: 50px;
+                height: 50px;
+                
+            }
+
+            .content_bottom_apply .message_container {
+                display: flex;
+                flex-direction: column;
+                width: 800px;
+                height: 100px;
+                margin-top: 200px;
+                margin-right: 50px;
+            }
+
+            .message_container .type_message form button {
+                display: block;
+            }
+
+            .type_message textarea {
+                width: 700px;
+                height: 100px;
+            }
+
+             <div class="content_bottom_apply">
+                <div class="container">
+                  <div class="message1">
+                      <img src="images/login_image.png" /><span>Leo</span>
+                      <p>Good Article</p>
+                  </div>
+                  <div class="message2">
+                      <span>Neo</span> <img src="images/login_image.png" />
+                      <p>thank you for you comments^^</p>
+                  </div>
+                  <div class="type_message">
+                      <form>
+                          <textarea placeholder="please leave a message">  </textarea>
+                          <button type="submit">전송</button>
+                      </form>
+                  </div>
+              </div>
+            </div>
+
+
+
+```
+
+### 배운점
++ 댓글을 만들때는 flex-direction:column을 사용하여 div를 세로로 정렬하였다
++ 컨텐츠 영역을 만들때는 flex-direction:row를 사용하여 div를 가로로 정렬하였다
+
+### 개선할점
++ 주말에도 조금씩 프로젝트를 진행하자
++ 이번주 주말까지는 상세페이지 화면과 관리자 메인페이지 레아아웃 작업을 끝내도록 하자
+
+
+
 
 
 
