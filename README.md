@@ -485,9 +485,6 @@
                                  
                             </p>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
@@ -648,6 +645,62 @@
 + 주말에도 조금씩 프로젝트를 진행하자
 + 이번주 주말까지는 상세페이지 화면과 관리자 메인페이지 레아아웃 작업을 끝내도록 하자
 
+
+
+# 2022년 01월 01일
+## 잘된점
++ flex 레이아웃을 사용하여 카드레이아웃을 만들어봄
++ flex의 주축 , 교차축 개념을 사용하여 카드레이아웃을 정렬함
+```
+            .middle_list .items .container {
+                width: 1000px;
+                height: 380px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: 1px solid palevioletred;
+            }
+
+            .middle_list .items .container .card1 {
+                width: 200px;
+                height: 300px;
+                border: 1px solid red;
+            }
+
+```
++ div의 width가 100%인 full-page header를 만들어봄
+## 배운점
++ flex의 주축 ,  교차축
+    + justify-content가 row 인지 column인지에 따라 주축 과 교차축이 결정된다
+    + 기본적으로 주축은 row 방향이다
+    + 주축을 정렬할 떄는 justify-content를 사용한다
+    + 교차축을 정렬할 때는 align-items를 사용한다
+    + [flex에 대한 상세 정리내용](https://unique-wandflower-4cc.notion.site/flexbox-2-1a2104c710014a4387eab8225bf4fa9d)
+
+## 개선할점
++ 블로그 프로젝트 초기부터 지금까지는 div의 모든 레이아웃을 width: 100%로 하고
++ maring-left: 15%를 줘서 가운데에 놓고 작업을 했었다
++ 그런데 블로그 사용자 입장에서 해당 레이아웃의 크기가 내용을 볼때는 답답하게 느껴질수 있겠다고 생각했다
++ 따라서 이를 개선하기 위해 글 상세페이지의 header 부분을 width가 100%인 full-page header로 수정해 보았다
++ 이를 바탕으로 모든 레이아웃에 반영해야 겠다
+```
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+             html, body{height: 100%;}
+
+            .top_container {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                width: 100%;
+                height: 100px;
+                border: 1px solid black;       
+            }
+```
 
 
 
