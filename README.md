@@ -704,6 +704,52 @@
 
 
 
+# 2022년 01월 02일
+## 잘된점
++ 블로그 글 상세페이지 글 밑에 글이 속한 태그를 표시하는 레이아웃 추가
++ 글을 공유할수 있는 버튼 추가
++ 글에 대한 문의를 채팅으로 남길수 있는 1:1문의하기 버튼 추가
++ 글에 대한 이미지를 포함한 장문의 질문을 남길수 있는 질문하기 버튼 추가
+
+## 배운점
++ flex 컨테이너를 만들었다
++ 컨테이너 안에 내부 요소들이 새로 방향으로 쌓일수 있게 flex-direction을 row로 줬다
++ 주축(새로) 기준 내부 요소들이 자연스럽게 여백을 갖도록 justify-content: space-around를 줬다
++ 교차축(가로) 기준 내부 요소들이 가운데 올수 있도록 align-items: center를 줬다
+```
+   .content_qa_share  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;    
+        width: 1000px;
+        height: 100px;
+        border: 1px solid peru;
+        margin-left: 15%;
+        margin-top: 20px;
+
+    }
+    
+    <div class="content_qa_share">
+        <div class="content_tags">
+            <a href="#">대항목</a>
+            <a href="#">소항목</a>
+        </div>
+        <div class="q&a_share_buttons">
+            <button type="button">공유하기</button>
+            <button type="button">1:1문의하기</button>
+            <button type="button">질문하기</button>
+        </div>
+    </div>
+
+```
+
+## 향후 계획
++ 다음주 부터 관리자 페이지 작업 시작
++ 관리자 메인 페이지
++ 관리자 글 관리 페이지
++ 관리자 카테고리 관리 페이지
++ 관리자 댓글 관리 페이지
 
 
 
