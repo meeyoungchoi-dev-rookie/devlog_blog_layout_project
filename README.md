@@ -1,6 +1,7 @@
 # devlog_blog_project
 블로그 개발 프로젝트
 
+## VERSION 1
 ## 12월 20일
 + 블로그 메인페이지 html로 레이아웃 설계
     + 상단 header
@@ -751,7 +752,93 @@
 + 관리자 카테고리 관리 페이지
 + 관리자 댓글 관리 페이지
 
+# VERSION 2
+# 2022년 01월 03일
 
+## 잘된점
++ flex를 사용하여 블로그 관라지 페이지 레이아웃 작업 진행
++ css 에서 특성선택자를 사용하여 코드 리펙토링
++ 순수하게 flex만을 사용하여 레이아웃 정렬
+## 배운점
++ flex를 사용할 때와 position 속성을 사용하여 정려할 때의 차이를 명확하게 느낄수 있었다
++ flex-direction에 따른 주축 과 교차축 설정 방법
++ justify-content를 사용하여 컨테이너가 감싸고 있는 전체 div를 가로 방향으로 정렬
++ align-items를 사용하여 컨테이너가 감싸고 있는 전체 div를 세로 방향으로 정렬
++ 특성선택자를 통해 html 요소를 더욱 명확하게 선택할 수 있었다
++ 부모 요소 내부에 자식요소를 선택할 때 결합 선택자를 사용하여 관계를 확실하게 표현할 수 있었다
+## 향후 계획
++ 관리자 메인페이지 chart.js 적용
++ 글 관리 페이지
++ 카테고리 관리 페이지
++ 댓글 관리 페이지
++ 채팅
+
+# 2022년 01월 04일
+## 잘된점
++ 블로그 관리자 메인페이지 작업
++ chart.js 를 적용하여 월별 블로그 방문자 그래프 생성
++ div에 7일간 인기글 목록을 보여주는 ol li 태그를 사용하여 레이아웃 생성
+
+## 배운점
++ chart.js를 사용하여 line chart 생성
++ chart.js cdn 사용하는 방법
+```
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
+<script>
+    const $chart = document.querySelector('#myChart').getContext('2d');
+    const myChart = new Chart($chart , {
+    type: 'line',
+    data: {
+        labels: ['January', 'Feb', 'March', 'April', 'May', 'June' , 'July'],
+        datasets: [{
+            yAxisID: 'y',
+            label: '블로그 월별 방문자 그래프',
+            data: [12, 19, 3, 5, 2, 3 , 16],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                max: 25,
+                ticks: {
+                    beginAtZero: true,
+                    
+                }
+                
+            }
+        }
+    }
+
+
+
+});
+
+</script>
+       
+```
+
+### 향후 계획
++ 블로그 관리자 글관리 페이지
++ 블로그 관리자 카테고리 관리 페이지
++ 블로그 관리자 댓글 관리 페이지
++ 블로그 관리자 채팅 관리 페이지
 
               
 
