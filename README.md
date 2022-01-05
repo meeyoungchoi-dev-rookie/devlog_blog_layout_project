@@ -842,8 +842,74 @@
 
               
 
+# 01월 05일
 
+## 잘된점
++ flex를 사용하여 div 내부 요소들을 정렬
++ flex를 사용하여 페이징 레이아웃 구현
+
+## 배운점
++ 자식 컨테이너 의 내부  레이아웃을 정렬할때도 flex를 사용하면 편하다
+```
+    [class="middle_content"] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+        height: 900px;
+        border: 1px solid red;
+    }
+
+    .middle_content  .content_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        width: 175px;
+        height: 850px;
+        border: 1px solid red;
+        margin-left: 10px;
+        
+    }
+
+    .middle_content > .content_left  > .content_top {
+        width: 160px;
+        height: 200px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .middle_content > .content_left  > .content_top img {
+        width: 50px;
+        margin-top: -16px;
+    }
+
+    .middle_content > .content_left  > .content_top h4 {
+        margin-top: 20px;
+    }
+
+
+    <div class="middle_content">
+        <div class="content_left">
+            <div class="content_top">
+                <img src="../version1/images/login_image.png">
+                <h4>DevLog.CMY</h4>
+                <button type="button">블로그 관리홈</button>
+            </div>
+        </div>
+    </div>    
+
+```
                
-
+## 향후 계획
++ 카테고리 관리 페이지
++ 댓글 관리 페이지
++ 채팅 관리 페이지
         
 
