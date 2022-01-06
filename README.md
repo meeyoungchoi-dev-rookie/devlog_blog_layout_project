@@ -635,7 +635,6 @@
             </div>
 
 
-
 ```
 
 ### 배운점
@@ -645,7 +644,6 @@
 ### 개선할점
 + 주말에도 조금씩 프로젝트를 진행하자
 + 이번주 주말까지는 상세페이지 화면과 관리자 메인페이지 레아아웃 작업을 끝내도록 하자
-
 
 
 # 2022년 01월 01일
@@ -702,7 +700,6 @@
                 border: 1px solid black;       
             }
 ```
-
 
 
 # 2022년 01월 02일
@@ -913,3 +910,67 @@
 + 채팅 관리 페이지
         
 
+# 01월 06일
+## 잘된점
++ flex를 사용하여 부모 컨테이너 내부 자식 요소들을 정렬하는 방법을 효율적으로 개선하기 위해 고민
++ 고민 결과
++ 부모 div 안에 화면 양쪽에 배치할 요소들을 두개를 만들어 뒀다
+### 문제점
++ 기존에는 요소들을 flex를 사용하여 양쪽에 배치한후
++ 각각 width , height , border를 줘서 한번더 요소들을 감싸는 div를 만들었다
++ div 안에서 원한는 위치로 이동시켰다
++ flex를 사용하여 효율적으로 레이아웃 배치 작업을 진행하려고 했는데 코드의 양이 더 늘어나 버렸다
+
+
+### 해결책
++ 1. flex를 사용하여 정렬해야 하는 요소들을 justify-content 와 align-items 속성을 사용하여 적절하게 배치시켜준다
++ 2. 각 요소들을  border 속성을 사용하여 테두리를 잡는다
++ 3. 여기서 바로 margin-left 와 margin-right 속성을 사용하여 원하는 위치로 이동시켜 줬다
+    + 왜? justify-content 속성의 값을 space-between으로 줬기 때문
+    + 이럴 경우 요소들이 양쪽 끝에 붙게 된다
+    + 부모 div 의 border와 요소들 사이에 margin을 사용하여 여백을 주기 위해 magin-left 와 margin-right를 사용하였다
++ 4. 처음에 box-sizing 설정을 border-box로 해뒀기 떄문에 border를 기준으로 위치를 조정하는 것이 가능해 졌다
++ 5. 이를 통해 코드의 양을 줄이고 효율적으로 작업할 수 있게 되었다
++ 6. 또한 flex를 사용하는 장점이 두배가 되었다
+
+### 코드 내용
+```
+* {
+    box-sizing: border-box;
+}
+
+[class="top_header"] {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.top_header h1 {
+    display: inline-block;
+    border: 1px solid gold;
+    margin-left: 5%;
+}
+
+.top_header .button_container  {
+    display: inline-block;
+    border: 1px solid black;
+    margin-right: 5%;
+}
+```
+
+
+## 배운점
++ box-sizing : border-box
+
+
+
+## 개선해야 할 사항
++ 각 화면별로 항상 반복해서 사용하는 레이아웃이 있다
++ 헤더 , 사이드바 , 푸터
++ 이들을 새로운 페이지를 작업 할때마다 다시 만드는 것은 시간 낭비이다
++ 이들을 하나의 페이지에 만들어 두고 필요한 곳에서 가져다 쓸수 있는 방법에 대한 고민 필요
