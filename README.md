@@ -974,3 +974,311 @@
 + 헤더 , 사이드바 , 푸터
 + 이들을 새로운 페이지를 작업 할때마다 다시 만드는 것은 시간 낭비이다
 + 이들을 하나의 페이지에 만들어 두고 필요한 곳에서 가져다 쓸수 있는 방법에 대한 고민 필요
+
+
+
+# 01월 07일
+## 카테고리 관리 페이지
+### 잘된점
++ flex를 사용하여 레이아웃 설계
++ flex 속성을 사용하여 카테고리목록 계층구조 표현
+
+### 고민했던 부분
++ 카테고리의 개수가 증가될때 height의 크기를 자동으로 늘려주는 방법
++ 부모 요소의 height 속성 값을 auto 로 설정하여 해결함
+
+### 상세 코드
+```
+ <div class="content_right">
+
+    <div class="right_top">
+        <h4>카테고리 관리</h4>
+        <div class="top_box1">
+            <p>카테고리 순서를 변경하고 주제 연결을 설정할 수 있습니다.</p>
+            <div>
+                <span>8/500</span>
+                <button type="button">전체 펼치기</button>
+                <button type="button">전체 접기</button>
+            </div>
+        </div>
+        <div class="top_box2">
+            <div class="box2_top">
+                <h5>분류 전체 보기</h5>
+                <div>
+                    <button type="button">수정</button>
+                    <button type="button">관리</button>
+                    <button type="button">이동</button>
+                </div>
+            </div>
+            <div class="box2_second">
+                <h5>HTTP<small>(총글수)</small></h5>
+                <div>
+                    <button type="button">수정</button>
+                    <button type="button">관리</button>
+                    <button type="button">이동</button>
+                </div>
+            </div>
+            <div class="box2_second_1">
+                <div class="a">
+                    <h4>인터넷 네트워크 <small>(4)</small></h4>
+                    <div>
+                        <button type="button">수정</button>
+                        <button type="button">관리</button>
+                        <button type="button">이동</button>
+                    </div>
+                </div>
+                <div class="a">
+                    <h4>URI와 웹브라우저 요청흐름 <small>(4)</small></h4>
+                    <div>
+                        <button type="button">수정</button>
+                        <button type="button">관리</button>
+                        <button type="button">이동</button>
+                    </div>
+                </div>
+                <div class="a">
+                    <h4>HTTP 기본 <small>(4)</small></h4>
+                    <div>
+                        <button type="button">수정</button>
+                        <button type="button">관리</button>
+                        <button type="button">이동</button>
+                    </div>
+                </div>
+                <div class="a">
+                    <h4>HTTP 메서드 <small>(4)</small></h4>
+                    <div>
+                        <button type="button">수정</button>
+                        <button type="button">관리</button>
+                        <button type="button">이동</button>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="box2_third">
+                <h5>프론트<small>(총글수)</small></h5>
+                <div>
+                    <button type="button">수정</button>
+                    <button type="button">관리</button>
+                    <button type="button">이동</button>
+                </div>
+            </div>
+            <div class="box2_third_1">                            
+                <div class="a">
+                    <h4>HTML <small>(1)</small></h4>
+                    <div>
+                        <button type="button">수정</button>
+                        <button type="button">관리</button>
+                        <button type="button">이동</button>
+                    </div>
+                </div>
+                <div class="a">
+                    <h4>CSS  <small>(7)</small></h4>
+                    <div>
+                        <button type="button">수정</button>
+                        <button type="button">관리</button>
+                        <button type="button">이동</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="add_category">
+                <h4>카테고리 추가</h4>
+            </div>
+            
+            <div class="save_category">
+                <h4>변경사항 저장</h4>
+            </div>
+
+        </div>
+    </div>
+    <div class="right_bottom">
+        <div>
+            <p>카테고리명 글자수: <input type="text"/></p>
+        </div>
+        <div>
+            <p>카테고리별 글수:   <select>
+                        <option value="reply_manage">표시합니다.</option>
+                        <option value="replay_police">표시하지 않습니다.</option>
+                    </select>
+            </p>
+        </div>
+        <div>
+            <p>카테고리 새글 발행여부:   <select>
+                        <option value="reply_manage">표시합니다.</option>
+                        <option value="replay_police">표시하지 않습니다.</option>
+                    </select>
+            </p>
+        </div>
+        <div>
+            <p><input type="text"/> 일 이내 발행된 글의 경우 새글 표시합니다. </p>
+        </div>
+    </div>
+</div>
+
+
+```
+
+```
+.content .content_right {
+    margin-top: 20px;
+    width: 1200px;
+    /* height: 850px; */
+    height: auto;
+    border: 1px solid black;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content_right .right_top {
+    width: 95%;
+    /* height: 600px; */
+    height: auto;
+    border: 1px solid red;
+}
+
+.content_right .right_top h4 {
+    display: inline-block;
+    margin-left: 11%;
+}
+
+.content_right .right_top  .top_box1 {
+    width: 100%;
+    height: 100px;
+    border: 1px solid green;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.content_right .right_top .top_box2 {
+    margin-top: 10px;
+    width: 100%;
+    /* height: 300px; */
+    height: auto;
+    border: 1px solid greenyellow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.content_right .right_top .top_box2 .add_category {
+    width: 80%;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.content_right .right_top .top_box2 .save_category {
+    width: 80%;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+
+
+.content_right .right_top .top_box2  .box2_top {
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+        
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.content_right .right_top .top_box2  .box2_second {
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content_right .right_top .top_box2  .box2_second_1 {
+    width: 70%;
+    height: auto;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.content_right .right_top .top_box2  .box2_second_1 .a {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.content_right .right_top .top_box2  .box2_third {
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.content_right .right_top .top_box2  .box2_third_1 {
+    width: 70%;
+    height: auto;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+.content_right .right_top .top_box2  .box2_third_1 .a {
+
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.content_right .right_bottom {
+    margin-top: 20px;
+    width: 95%;
+    height: auto;
+    border: 1px solid orange;
+}
+
+```
+
+
+
