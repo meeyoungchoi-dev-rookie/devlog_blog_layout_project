@@ -582,58 +582,59 @@
 
         </div>
 
-        <script>
-
-            const $registerButton = document.querySelector('#register');
-            const $loginButton = document.querySelector('#login');
-            const $body = document.querySelector('body');
-
-
-            const $registerPopup = document.querySelector('.register');
-            const $loginPopup = document.querySelector('.login_popup');
-            
-            const $blogContent = document.querySelector('.blog_content');
-
-            const $bgLayer = document.querySelector('.bgLayer')
-
-
-            $registerPopup.style.display = "none";
-            $loginPopup.style.display = "none";
-            const registerClick = (event) => {
-                $registerPopup.style.display = "block";
-                $registerPopup.style.backgroundColor = "white";
-                $loginPopup.style.display = "none";
-                $blogContent.style.display = "none";
-               // 불투명 배경 생성
-               bgLayerOpen();
-            }
-
-
-            const bgLayerOpen = () => {
-                $bgLayer.style.display = "block";
-
-
-
-            }
-
-            const loginClick = (event) => {
-
-                $loginPopup.style.display = "block";
-                $loginPopup.style.backgroundColor = "white";
-                $registerPopup.style.display = "none";
-                $blogContent.style.display = "none";
-                // 불투명 배경 생성
-                bgLayerOpen();
-                
-                
-            }
-
-            $registerButton.addEventListener('click' , registerClick);    
-            $loginButton.addEventListener('click' , loginClick);
-
-        </script>
-
+      
 
 
     </body>
+    <script>
+
+        const $registerButton = document.querySelector('#register');
+        const $loginButton = document.querySelector('#login');
+        const $body = document.querySelector('body');
+
+
+        const $registerPopup = document.querySelector('.register');
+        const $loginPopup = document.querySelector('.login_popup');
+        
+        const $blogContent = document.querySelector('.blog_content');
+
+        const $bgLayer = document.querySelector('.bgLayer')
+
+
+        $registerPopup.style.display = "none";
+        $loginPopup.style.display = "none";
+        const registerClick = (event) => {
+            $registerPopup.style.display = "block";
+            $registerPopup.style.backgroundColor = "white";
+            $loginPopup.style.display = "none";
+            $blogContent.style.display = "none";
+           // 불투명 배경 생성
+           bgLayerOpen();
+        }
+
+
+        const bgLayerOpen = () => {
+            $bgLayer.style.display = "block";
+
+
+
+        }
+
+        const loginClick = (event) => {
+
+            $loginPopup.style.display = "block";
+            $loginPopup.style.backgroundColor = "white";
+            $registerPopup.style.display = "none";
+            $blogContent.style.display = "none";
+            // 불투명 배경 생성
+            bgLayerOpen();
+            
+            
+        }
+
+        $registerButton.addEventListener('click' , registerClick);    
+        $loginButton.addEventListener('click' , loginClick);
+
+    </script>
+
 </html>
