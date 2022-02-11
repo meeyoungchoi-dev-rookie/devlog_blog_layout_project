@@ -1,5 +1,5 @@
 # devlog_blog_layout_project
-블로그 개발 프로젝트 레이아웃 설계
+블로그 레이아웃 설계
 
 ## VERSION 1
 ## 12월 20일
